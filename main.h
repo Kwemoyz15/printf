@@ -68,17 +68,17 @@ int print_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 int print_hexa(va_list types, char map_to[],
-OBOBOBchar buffer[], int flags, char flag_ch, int width, int precision, int size);
+char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 /* Function to print non printable characters */
-OBOBOBint print_non_printable(va_list types, char buffer[],
+int print_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
-OBOBOB/* Funcion to print memory address */
+/* Funcion to print memory address */
 int print_pointer(va_list types, char buffer[],
-OBOBOB	int flags, int width, int precision, int size);
+	int flags, int width, int precision, int size);
 
-OBOBOB/* Funciotns to handle other specifiers */
+/* Funciotns to handle other specifiers */
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
@@ -87,15 +87,15 @@ int get_size(const char *format, int *i);
 /*Function to print string in reverse*/
 int print_reverse(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-OBOBOB
+
 /*Function to print a string in rot 13*/
-OBOBOBint print_rot13string(va_list types, char buffer[],
+int print_rot13string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-OBOBOBOBOBOB
+
 /* width handler */
-OBOBOBint handle_write_char(char c, char buffer[],
+int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size);
-OBOBOBint write_number(int is_positive, int ind, char buffer[],
+int write_number(int is_positive, int ind, char buffer[],
 	int flags, int width, int precision, int size);
 int write_num(int ind, char bff[], int flags, int width, int precision,
 	int length, char padd, char extra_c);
